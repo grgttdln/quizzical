@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+.q--blue {
+    position: absolute;
+    bottom: 0;
+}
+
+.q--yellow {
+    position: absolute;
+    right: 0;
+}
+
+.q--subtitile {
+    padding: 8px;
+    color: #293264;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-family: 'Inter', sans-serif;
+}
+
+.q--title {
+    color: #293264;
+    text-align: center;
+    font-size: 31.25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Karla', sans-serif;
+}
+
+.q--container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.q--start-btn {
+    width: 193px;
+    height: 52px;
+    border-radius: 15px;
+    background: #4D5B9E;
+    margin-top: 2rem;
+    box-shadow: 0 8px 10px rgb(0 0 0 / 0.2);
+}
+
+.q--start-btn p {
+    color: #F5F7FB;
+    text-align: center;
+    height: 52px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.q--spinner-load {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

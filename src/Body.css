@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+.body--footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 5%;
+    color: #213287;
+}
+
+.body--title {
+    font-family: 'Karla', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #213287;
+    margin-bottom: -8%;
+    margin-top: 3%;
+}
+
+.body--card-newgame {
+    position: absolute;
+    width: 150px;
+    height: 45px;
+    border-radius: 8px;
+    background: #4D5B9E;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    right: 0;
+    margin-right: 5%;
+    box-shadow: 0 8px 10px rgb(0 0 0 / 0.2);
+}
+
+.body--card-score {
+    margin-left: 2%;
+    padding: .5rem;
+    font-weight: 800;
+    border: 2px solid rgb(213, 213, 213);
+}
+
+.body--card-result-subtitle {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #4D5B9E;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.body--card-result-title {
+    margin-top: 2rem;
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;    
+    font-size: 25px;
+    color: #4D5B9E;
+}
+
+.body--card-result-1 {
+    padding-top: 5%;
+    padding-left: 28%;
+    padding-right: 28%;
+}
+
+.body--card-result-2 {
+    border: 5px solid #4D5B9E;
+    border-radius: 16px;
+}
+
+.body--start-btn {
+    width: 193px;
+    height: 52px;
+    border-radius: 15px;
+    background: #4D5B9E;
+    justify-content: center;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 8px 10px rgb(0 0 0 / 0.2);
+}
+
+.body--start-btn p {
+    color: #F5F7FB;
+    text-align: center;
+    height: 52px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.body--container {
+    padding-top: 3%;
+    padding-left: 28%;
+    padding-right: 28%;
+}
+
+.body--btn-choice {
+    border-radius: 8px;
+    border: 1px solid var(--violet, #4D5B9E);
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    color: #4D5B9E;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.body--category {
+    font-family: 'Inter', sans-serif;
+    color: #4D5B9E;
+    border-bottom: 1px solid #4D5B9E;
+}
+
+.body--tanong {
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 1.5rem;
+    color: #4D5B9E;
+    font-weight: 700;
+}
+
+.body--card {
+    border: 5px solid #4D5B9E;
+    border-radius: 16px;
+}
+
+.body--container-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn.btn-primary:disabled {
+    border-radius: 8px;
+    border: 1px solid var(--violet, #4D5B9E);
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    color: #4D5B9E;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary.active:hover,
+.btn.btn-primary.active {
+    background-color: #4D5B9E;
+    color: white;
+}
+
+.btn.btn-success:hover,
+.btn.btn-success.active:hover,
+.btn.btn-success.active {
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    font-weight: 600;
+}
+
+.btn.btn-danger:hover,
+.btn.btn-danger.active:hover,
+.btn.btn-danger.active {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    font-weight: 600;
+}
