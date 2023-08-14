@@ -1,6 +1,6 @@
-import he from "he";
-import {nanoid} from "nanoid";
 import React from 'react'
+import {nanoid} from "nanoid";
+import he from "he";
 import Quizzical from './Quizzical';
 import Body from './body';
 import './App.css'
@@ -9,19 +9,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
 
-  const [questionPool, setQuestionPool] = React.useState({})
+  const [questionPool, setQuestionPool] = React.useState([])
   const [startnewgamebtn, setStartnewgamebtn] = React.useState(1)
   const [question, setQuestion] = React.useState([])
   const [start, setStart] = React.useState(false)
-
-
-  React.useEffect(function() {
-    fetch("https://opentdb.com/api.php?amount=5&difficulty=hard&type=multiple")
-      .then(res => res.json())
-      .then(data => setQuestionPool(data.results))
-      .catch(error => console.log(error))
-  }, [startnewgamebtn])
-
 
   React.useEffect(() => {
     async function fetchQs() {
@@ -29,13 +20,13 @@ export default function App() {
       const data = await res.json()
       setQuestionPool(data.results)
     }
-
+    
     fetchQs()
-  }, [startnewgamebtn])
+  }, [question])
   
 
   function handleStartNewGame() {
-    setStartnewgamebtn(prev => prev + 1)
+    setStartnewgamebtn(prev => prev + 1)  
     setQuestion([])
     getQuestionSet()
   }
@@ -69,7 +60,6 @@ export default function App() {
 
   return (
     <>
-      <main>
         {
           start === true
           ?
@@ -84,7 +74,6 @@ export default function App() {
           />
           </>
         }
-      </main>
     </>
   )
 }
