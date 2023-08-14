@@ -2,12 +2,13 @@ import Confetti from 'react-confetti';
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
 import './Body.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default function Body(props) {    
-
+export default function Body(props) {   
+   
   React.useEffect(() => {
     props.q.map(q => {
       setCorrectQA(prev => {
@@ -52,15 +53,31 @@ export default function Body(props) {
   }
 
   function checkQuiz() {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    setIsSubmitted(prev => !prev)
-
-    for(const [key, value] of Object.entries(correctQA)) {
-      if(selectedAns[key] === value) {
-        setScore(prev => prev + 1)
+    if(Object.keys(selectedAns).length === 5) {
+      setShow(false)
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      setIsSubmitted(prev => !prev)
+  
+      for(const [key, value] of Object.entries(correctQA)) {
+        if(selectedAns[key] === value) {
+          setScore(prev => prev + 1)
+        }
       }
+    } else {
+      setShow(true)
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
   }
+
+  const [show, setShow] = React.useState(false)
+
+  const notif = 
+  <Alert variant="secondary" onClose={() => setShow(false)} dismissible>
+    <Alert.Heading>Quizzical: Incomplete Answer</Alert.Heading>
+    <p>
+      Complete the quiz before submitting!
+    </p>
+  </Alert>
 
   
   const questionDisplay = props.q.map(q =>
@@ -180,6 +197,13 @@ export default function Body(props) {
   return (
     <>  
       <div className='body--container'>
+        {
+          show
+          ?
+          notif
+          :
+          ''
+        }
         <div className='body--title'>
           Quizzical
         </div>
